@@ -7,7 +7,7 @@
     tools:context=".view.activities.LoginActivity">
 
     <ImageView
-        android:id="@+id/logoimageview"
+        android:id="@+id/logoimgview"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="70dp"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoimageview" />
+        app:layout_constraintTop_toBottomOf="@+id/logoimgview" />
 
     <TextView
         android:id="@+id/questionregistertextview"
