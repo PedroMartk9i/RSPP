@@ -19,6 +19,9 @@ import com.google.firebase.firestore.core.View;
 
 public class presentActivity extends AppCompatActivity {
 
+    TextView titulotextView;
+    ImageView logoimageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +29,10 @@ public class presentActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_present);
         //En este apartado agregamos los metodos de las animaciones
-        Animation animacion1= AnimationUtils.loadAnimation(this,R.anim.desplazamientoarriba);
-        Animation animacion2= AnimationUtils.loadAnimation(this,R.anim.desplazamientoabajo);
-        TextView titulotextView=findViewById(R.id.titulotextView);
-        ImageView logoimageView=findViewById(R.id.logoimageView);
+        Animation animacion1 = AnimationUtils.loadAnimation(this,R.anim.desplazamientoarriba);
+        Animation animacion2 = AnimationUtils.loadAnimation(this,R.anim.desplazamientoabajo);
+        titulotextView = findViewById(R.id.titulotextView);
+        logoimageView = findViewById(R.id.logoimageView);
 
         titulotextView.setAnimation(animacion2);
         logoimageView.setAnimation(animacion1);
@@ -38,9 +41,10 @@ public class presentActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(presentActivity.this, LoginActivity.class);
+
                 Pair [] pairs = new Pair[2];
-                pairs[0]= new Pair <View,String>(logoimageView,"LogoImageTrans");
-                pairs[1]= new Pair <View,String>(titulotextView,"TextoAppTrans");
+                pairs[0]= new Pair <android.view.View,String>(logoimageView,"LogoImageTrans");
+                pairs[1]= new Pair <android.view.View,String>(titulotextView,"TextoAppTrans");
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(presentActivity.this, pairs);
@@ -52,7 +56,7 @@ public class presentActivity extends AppCompatActivity {
 
             }
 
-        },4000);  }
+        },2500);  }
 }
 
 
