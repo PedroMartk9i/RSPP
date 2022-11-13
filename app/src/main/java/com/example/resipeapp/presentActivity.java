@@ -2,9 +2,12 @@ package com.example.resipeapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Pair;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -12,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.resipeapp.view.activities.LoginActivity;
+import com.google.firebase.firestore.core.View;
 
 public class presentActivity extends AppCompatActivity {
 
@@ -34,8 +38,18 @@ public class presentActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(presentActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
+                Pair [] pairs = new Pair[2];
+                pairs[0]= new Pair <View,String>(logoimageView,"LogoImageTrans");
+                pairs[1]= new Pair <View,String>(titulotextView,"TextoAppTrans");
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(presentActivity.this, pairs);
+                    startActivity(intent, options.toBundle());
+                } else {
+                    startActivity(intent);
+                    finish();
+                }
+
             }
 
         },4000);  }
