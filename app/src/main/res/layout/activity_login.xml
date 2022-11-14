@@ -19,35 +19,19 @@
         />
 
     <EditText
-        android:id="@+id/tv_email"
+        android:id="@+id/EmaileditView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:fontFamily="casual"
-        android:hint="@string/tv_email"
+        android:hint="Email"
         android:inputType="textPersonName"
+        android:transitionName="TextoAppTrans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/infotitletextview"
-        android:transitionName="TextoAppTrans"
-        />
-
-    <Button
-        android:id="@+id/btn_ingresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:fontFamily="casual"
-        android:onClick="clickLogin"
-        android:text="Login"
-        android:textStyle="bold"
-        android:transitionName="Logtrans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgotpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/infotitletextview" />
 
     <TextView
         android:id="@+id/titletextview"
@@ -68,7 +52,7 @@
         android:id="@+id/questionregistertextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="111dp"
         android:clickable="true"
         android:focusable="true"
         android:text="¿Eres nuevo? ¡Registrate ahora!"
@@ -76,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ingresar" />
+        app:layout_constraintTop_toBottomOf="@+id/ingresarbtn" />
 
     <TextView
         android:id="@+id/infotitletextview"
@@ -91,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/titletextview" />
 
     <EditText
-        android:id="@+id/tv_pass"
+        android:id="@+id/contraeditView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
@@ -107,7 +91,7 @@
 
         app:layout_constraintHorizontal_bias="0.312"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+        app:layout_constraintTop_toBottomOf="@+id/EmaileditView" />
 
     <TextView
         android:id="@+id/forgotpassword"
@@ -121,6 +105,16 @@
         android:textColor="#658AFB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pass" />
+        app:layout_constraintTop_toBottomOf="@+id/contraeditView" />
+
+    <Button
+        android:id="@+id/ingresarbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="LOGIN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotpassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

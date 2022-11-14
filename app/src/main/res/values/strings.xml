@@ -9,10 +9,9 @@
     <string name="et_url">Url Imagen</string>
     <string name="btn_guardar">Guardar Receta</string>
     <string name="btn_regresar">Regresar</string>
-    <string name="tv_email">Email administrativo</string>
-    <string name="tv_contraseña">Contraseña</string>
+    <string name="EmaileditView">Email </string>
+    <string name="contraeditView">Contraseña</string>
     <string name="btn_ingresar">Ingresar</string>
-    <string name="btn_registrar">Registrar</string>
     <string name="msg_error">hhjgjhgghj</string>
     <string name="close_sesion">Cerrar Sesion</string>
     <string name="et_nombreuser">Nombre Completo</string>

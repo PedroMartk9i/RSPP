@@ -6,77 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".SignUpActivity">
 
-    <ImageView
-        android:id="@+id/Signlogoview"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="271dp"
-        android:transitionName="logoimagetrans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/imagenrescontrastshadow" />
-
-    <TextView
-        android:id="@+id/welcomtext"
+    <EditText
+        android:id="@+id/cocoeditview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="224dp"
-        android:fontFamily="@font/font1"
-        android:text="Bienvenido,"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:transitionName="Bienvetextrans"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:transitionName="cocotextrans"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Signlogoview" />
+        app:layout_constraintTop_toBottomOf="@+id/contraeditview" />
 
     <TextView
         android:id="@+id/complementextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="45dp"
         android:layout_marginEnd="109dp"
         android:fontFamily="@font/abel"
         android:text="Registrate para empezar a usar RESipeAPP"
         android:textSize="16sp"
         android:transitionName="complementextrans"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomtext" />
-
-    <EditText
-        android:id="@+id/Usueditview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:ems="10"
-        android:hint="Usuario"
-        android:inputType="textPersonName"
-        android:transitionName="usutextTrans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/complementextview" />
-
-    <EditText
-        android:id="@+id/Emaileditview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:transitionName="emailtexTrans"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Usueditview" />
 
     <EditText
         android:id="@+id/contraeditview"
@@ -88,35 +45,37 @@
         android:inputType="textPassword"
         android:transitionName="contratextrans"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Emaileditview" />
 
-    <EditText
-        android:id="@+id/cocoeditview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Confirm Password"
-        android:inputType="textPassword"
-        android:transitionName="cocotextrans"
+    <ImageView
+        android:id="@+id/Signlogoview"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="271dp"
+        android:transitionName="logoimagetrans"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contraeditview" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imagenrescontrastshadow" />
 
-    <Button
-        android:id="@+id/signbtn"
+    <EditText
+        android:id="@+id/Usueditview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="REGISTRAR"
-        android:transitionName="signbTrans"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="textPersonName"
+        android:transitionName="usutextTrans"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cocoeditview" />
+        app:layout_constraintTop_toBottomOf="@+id/complementextview" />
 
     <TextView
         android:id="@+id/questiontextView"
@@ -131,8 +90,51 @@
         android:textStyle="bold"
         android:transitionName="questionTrans"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signbtn" />
+
+    <TextView
+        android:id="@+id/welcomtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="224dp"
+        android:fontFamily="@font/font1"
+        android:text="Bienvenido,"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:transitionName="Bienvetextrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Signlogoview" />
+
+    <EditText
+        android:id="@+id/Emaileditview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:transitionName="emailtexTrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Usueditview" />
+
+    <Button
+        android:id="@+id/signbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="REGISTRAR"
+        android:transitionName="signbTrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cocoeditview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
