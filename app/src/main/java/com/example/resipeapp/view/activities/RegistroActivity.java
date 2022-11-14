@@ -41,7 +41,7 @@ public class RegistroActivity extends AppCompatActivity {
         etnombre = findViewById(R.id.et_nombreuser);
         etemail = findViewById(R.id.et_email);
         etpass = findViewById(R.id.et_password);
-        btnregistrar = findViewById(R.id.btn_registrar);
+        //btnregistrar = findViewById(R.id.btn_registrar);
 
 
        /* btnregistrar.setOnClickListener(new View.OnClickListener() {

@@ -43,32 +43,22 @@
         android:onClick="clickLogin"
         android:text="Login"
         android:textStyle="bold"
+        android:transitionName="Logtrans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgotpassword" />
-
-    <Button
-        android:id="@+id/btn_registrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:fontFamily="casual"
-        android:onClick="clickRegistroo"
-        android:text="registrarse"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ingresar" />
 
     <TextView
         android:id="@+id/titletextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:text="Bienvenido a ResipeApp!"
-        android:textSize="30sp"
+        android:fontFamily="@font/font1"
+        android:text="¡Bienvenido a ResipeApp!"
+        android:textSize="40sp"
         android:textStyle="bold"
+        android:transitionName="TitleTrans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,18 +68,24 @@
         android:id="@+id/questionregistertextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="90dp"
+        android:clickable="true"
+        android:focusable="true"
         android:text="¿Eres nuevo? ¡Registrate ahora!"
+        android:transitionName="questionregTrans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_registrar" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_ingresar" />
 
     <TextView
         android:id="@+id/infotitletextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
         android:text="¡Ingresa tu email y contraseña para continuar!"
+        android:textSize="14sp"
+        android:transitionName="completeTrans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titletextview" />
@@ -105,6 +101,7 @@
         android:fontFamily="casual"
         android:hint="Password"
         android:inputType="textPassword"
+        android:transitionName="passTrans"
 
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -120,6 +117,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="67dp"
         android:text="¿Olvidaste tu contraseña?"
+        android:transitionName="forgotTrans"
         android:textColor="#658AFB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
