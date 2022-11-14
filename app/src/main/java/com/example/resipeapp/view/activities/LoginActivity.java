@@ -29,13 +29,13 @@ import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
 
-    //Declaramos la coleccion de firebase con el nombre que creamos en web(google FireBase)
-    public static final String NOMBRE_COLECCION2 = "registro";
 
+    //Referenciamos lo que estamos usando en el Layout
     EditText EmaileditView, contraeditView;
     ImageView logoimgview;
     TextView titletextview,infotitletextview,forgotpassword,questionregistertextview;
     Button ingresarbtn;
+    //Importamos librerias de Authenticator
     private FirebaseAuth mAuth;
     private SharedPreferences sharedPreferences; // SharedPreferences sirve para guardar las contraseñas y que no nos pida cada vez ingresar los datos
 
@@ -127,8 +127,10 @@ public class LoginActivity extends AppCompatActivity {
 
         }else{
             contraeditView.setError(null);
+
         }
         iniciarSesion(email,password);
+
 
     }
 
@@ -140,6 +142,8 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+                            startActivity(intent);
+                            finish();
 
                         }else{
                             Toast.makeText(LoginActivity.this,"Credenciales Incorrectas, intenta de nuevo.",Toast.LENGTH_LONG).show();

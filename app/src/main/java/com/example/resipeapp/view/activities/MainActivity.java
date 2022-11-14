@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.example.resipeapp.ProfileActivity;
 import com.example.resipeapp.model.local.BaseDatos;
 import com.example.resipeapp.R;
 import com.example.resipeapp.model.entities.Recetas;
@@ -55,22 +56,30 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
 
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.Cerrar_sesion:
-                SharedPreferences sharedPreferences = getSharedPreferences("preferencias",MODE_PRIVATE);
+                SharedPreferences sharedPreferences = getSharedPreferences("preferencias", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit(); //nos traemos el editor tal cual del loginactivity
-                editor.putBoolean("logueado",false);//nos traemos el editor tal cual del loginactivity y le cambiamos el true a false
+                editor.putBoolean("logueado", false);//nos traemos el editor tal cual del loginactivity y le cambiamos el true a false
                 editor.apply();//nos traemos el editor tal cual del loginactivity
 
-                Intent in = new Intent(MainActivity.this,LoginActivity.class);//este nos sirve para mandar a la activity que deseemos despues de poner los datos
-                in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK );//le pasamos la bandera para que cierre todoydeje el login
+                Intent in = new Intent(MainActivity.this, LoginActivity.class);//este nos sirve para mandar a la activity que deseemos despues de poner los datos
+                in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);//le pasamos la bandera para que cierre todoydeje el login
                 startActivity(in);
 
                 break;
 
+            case R.id.profilenav:
+
+                Intent inte = new Intent(MainActivity.this, ProfileActivity.class);//este nos sirve para mandar a la activity que deseemos despues de poner los datos
+                startActivity(inte);
         }
+
+
+
         return super.onOptionsItemSelected(item);
     }
 

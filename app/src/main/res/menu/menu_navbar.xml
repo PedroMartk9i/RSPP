@@ -3,6 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/profilenav"
+        android:title="Profile" />
+    <item
         android:id="@+id/Cerrar_sesion"
         android:title="@string/close_sesion" />
 </menu>
